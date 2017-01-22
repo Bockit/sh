@@ -2,3 +2,4 @@ yarn.lock
 test.js
 LICENSE.md
 .gitignore
+.travis.yml
