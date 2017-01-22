@@ -1,4 +1,4 @@
-# sh
+# sh [![Build Status](https://travis-ci.org/Bockit/sh.svg?branch=master)](https://travis-ci.org/Bockit/sh)
 
 This module provides a template string handler for executing shell commands synchronously.
 
