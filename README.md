@@ -93,8 +93,11 @@ If you catch the error it will still log the command and output on stderr.
 Run with `DEBUG=sh:commands` to see a log of all commands run and from which directory they are run. Example: 
 
 ```
-  sh:commands executing: echo "hello" +4ms
+  sh:commands executing: echo "hello" +0ms
   sh:commands -> current directory: /Users/james/Documents/oss/@bockit/sh +0ms
+  sh:commands -> output:
+  sh:commands   hello
+  sh:commands    +3ms
 ```
 
 ## Running Tests

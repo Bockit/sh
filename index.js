@@ -28,7 +28,9 @@ function execute(command) {
   try {
     debug(`executing: ${command}`)
     debug(`-> current directory: ${process.cwd()}`)
-    return execSync(command, { stdio: 'pipe' }).toString()
+    const output = execSync(command, { stdio: 'pipe' }).toString()
+    debug(`-> output:\n${indent(output)}`)
+    return output
   }
   catch(error) {
     logError(error)
@@ -37,6 +39,8 @@ function execute(command) {
 }
 
 function logError(error) {
+  if (!error.stderr) return
+
   console.error(indent(`\n${error.cmd}`))
   const stdErr = indent(error.stderr.toString())
   console.error(stdErr)
