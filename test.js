@@ -45,3 +45,26 @@ test('it throws if the command has a non-zero exit code', function(assert) {
     assert.pass('throws when there is an error running the command')
   }
 })
+
+test('it handles multiline', function(assert) {
+  assert.plan(2)
+
+  let result
+  let expected
+
+  result = sh`
+    echo Hello, world
+    echo Goodbye, cruel world!
+  `
+  expected = 'Hello, world\nGoodbye, cruel world!\n'
+
+  assert.equal(result, expected)
+
+  result = sh`
+    value="Hello"
+    echo $value, world!
+  `
+  expected = 'Hello, world!\n'
+
+  assert.equal(result, expected)
+})

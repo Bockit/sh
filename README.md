@@ -23,6 +23,21 @@ const sh = require('@bockit/sh')
 sh`echo hello world` // 'hello world'
 ```
 
+It works with multiline too
+
+sh`
+  place=world
+  echo Hello, $place!
+  echo Goodbye.
+`
+
+// Hello, world!
+// Goodbye.
+
+The return value in this case will be all the output of the entire script.
+
+
+
 ### Interpolation
 
 If you interpolate a value into your template tag it will be escaped by [`shell-escape`][shell escape] before being inserted into the command.
