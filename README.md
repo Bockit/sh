@@ -25,7 +25,9 @@ sh`echo hello world` // 'hello world'
 
 It works with multiline too
 
-```
+```javascript
+const sh = require('@bockit/sh')
+
 sh`
   place=world
   echo Hello, $place!
