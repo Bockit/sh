@@ -25,6 +25,7 @@ sh`echo hello world` // 'hello world'
 
 It works with multiline too
 
+```
 sh`
   place=world
   echo Hello, $place!
@@ -33,6 +34,7 @@ sh`
 
 // Hello, world!
 // Goodbye.
+```
 
 The return value in this case will be all the output of the entire script.
 
