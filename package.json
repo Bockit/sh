@@ -1,6 +1,6 @@
 {
   "name": "@bockit/sh",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Template tag shell scripts",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": "git@github.com:bockit/sh.git",
   "author": "James Hiscock <james@jameshiscock.com> (http://jameshiscock.com/)",
   "license": "MIT",
   "dependencies": {
